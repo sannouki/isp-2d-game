@@ -1,0 +1,4 @@
+repository "Thesis RPG@thienleesinong@cloud"
+  path "/"
+    br "/main"
+    co "/main"
