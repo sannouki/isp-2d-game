@@ -94,7 +94,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Player
+  - name: gun not fire
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -103,6 +103,48 @@ ScriptedImporter:
       serializedVersion: 2
       x: 520
       y: 4
+      width: 321
+      height: 371
+    spriteID: 10a98ddad1546954e85a150892e84046
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 520, y: 4}
+    spritePosition: {x: 1003, y: 1426}
+  - name: gun fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 446
+      width: 444
+      height: 380
+    spriteID: 3471e6fc371e43640b3e389623c3540d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 446}
+    spritePosition: {x: 1003, y: 812}
+  - name: Player
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 520
+      y: 383
       width: 159
       height: 315
     spriteID: ea8c89c00e7b2984ba6650591dd14353
@@ -113,8 +155,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 518, y: 3}
-    spritePosition: {x: 2002, y: 1296}
+    uvTransform: {x: 520, y: 383}
+    spritePosition: {x: 2002, y: 1297}
   - name: coin
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -123,7 +165,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 520
-      y: 327
+      y: 706
       width: 135
       height: 158
     spriteID: 2949c2f71dcd9e4439e48a9265fbfba3
@@ -134,7 +176,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 520, y: 327}
+    uvTransform: {x: 520, y: 706}
     spritePosition: {x: 2493, y: 1001}
   - name: ground_1
     originalName: 
@@ -165,7 +207,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 520
-      y: 493
+      y: 872
       width: 0
       height: 0
     spriteID: 0dfe4f30729ef364495ec5042cff3a80
@@ -176,7 +218,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 520, y: 493}
+    uvTransform: {x: 520, y: 872}
     spritePosition: {x: 0, y: 2160}
   characterData:
     bones: []
@@ -214,13 +256,33 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: gun not fire
+    spriteName: gun not fire
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 10a98ddad1546954e85a150892e84046
+    layerID: 29
+    mosaicPosition: {x: 520, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: gun fire
+    spriteName: gun fire
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3471e6fc371e43640b3e389623c3540d
+    layerID: 28
+    mosaicPosition: {x: 4, y: 446}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Player
     spriteName: Player
     isGroup: 0
     parentIndex: -1
     spriteID: ea8c89c00e7b2984ba6650591dd14353
     layerID: 6
-    mosaicPosition: {x: 520, y: 4}
+    mosaicPosition: {x: 520, y: 383}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -230,7 +292,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 2949c2f71dcd9e4439e48a9265fbfba3
     layerID: 20
-    mosaicPosition: {x: 520, y: 327}
+    mosaicPosition: {x: 520, y: 706}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -260,7 +322,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 0dfe4f30729ef364495ec5042cff3a80
     layerID: 19
-    mosaicPosition: {x: 520, y: 493}
+    mosaicPosition: {x: 520, y: 872}
     flatten: 0
     isImported: 1
     isVisible: 1
