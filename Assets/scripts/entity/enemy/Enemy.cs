@@ -17,6 +17,7 @@ public class Enemy : PhysicsObject
     public int health = 100;
     [SerializeField] private LayerMask rayCastLayerMask;
 
+
     private bool spriteFacingRight;
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class Enemy : PhysicsObject
         Debug.DrawRay(new Vector2(transform.position.x + raycastoffset.x, transform.position.y + raycastoffset.y), Vector2.down * raycastlength, Color.blue);
         if (rightLedge.collider == null)
         {
-            Debug.Log("Right ledge detected, turning left");
+            //Debug.Log("Right ledge detected, turning left");
             direction = -1;
             spriteFacingRight = false;
             FlipSprite();
@@ -51,7 +52,7 @@ public class Enemy : PhysicsObject
         Debug.DrawRay(new Vector2(transform.position.x - raycastoffset.x, transform.position.y + raycastoffset.y), Vector2.down * raycastlength, Color.green);
         if (leftLedge.collider == null)
         {
-            Debug.Log("Left ledge detected, turning right");
+            //Debug.Log("Left ledge detected, turning right");
             direction = 1;
             spriteFacingRight = true;
             FlipSprite();
@@ -66,7 +67,7 @@ public class Enemy : PhysicsObject
         Debug.DrawRay(new Vector2(transform.position.x + wallRaycastOffset.x, transform.position.y + wallRaycastOffset.y), Vector2.left * wallRaycastLength, Color.magenta);
         if (leftwall.collider != null)
         {
-            Debug.Log("Left wall detected, turning right");
+            //Debug.Log("Left wall detected, turning right");
             direction = 1;
             spriteFacingRight = true;
             FlipSprite();
@@ -79,7 +80,7 @@ public class Enemy : PhysicsObject
         Debug.DrawRay(new Vector2(transform.position.x + wallRaycastOffset.x, transform.position.y + wallRaycastOffset.y), Vector2.right * wallRaycastLength, Color.red);
         if (rightwall.collider != null)
         {
-            Debug.Log("Right wall detected, turning left");
+            //Debug.Log("Right wall detected, turning left");
             direction = -1;
             spriteFacingRight = false;
             FlipSprite();

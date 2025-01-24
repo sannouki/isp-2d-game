@@ -8,13 +8,14 @@ public class NewPlayer : PhysicsObject
 {
     [SerializeField] private float maxSpeed = 1;
     [SerializeField] private float jumpHeight = 10;
+    //directions
+    public bool IsFacingRight { get; private set; }
 
     //collectable variables
     [SerializeField] private TMP_Text CoinsText; // Reference to the TextMeshPro UI for coins
     public int coinCollected;  //Counter for amount of coins collected
     [SerializeField] private TMP_Text AmmoText; //Reference to the TextMeshPro UI for ammo
     public int maxAmmo;
-
 
     //health variables.
     public int health = 100;
@@ -58,10 +59,16 @@ public class NewPlayer : PhysicsObject
         //Handle player movement (left-right) based on input
         targetVelocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, 0);
 
+        // Check if the player is facing right or left
+        facingDirection();
+
         // Handle jumping when the "Jump" button is pressed and the player is grounded
         if (Input.GetButtonDown("Jump") && grounded){
             velocity.y = jumpHeight;
         }
+
+
+
     }
 
     // Update the coin count displayed in the UI
@@ -92,5 +99,18 @@ public class NewPlayer : PhysicsObject
     {
         maxAmmo--;  // decrease 1 bullet per use
         UpdateUI();   // Update the UI new ammo.
+    }
+    
+    // This method control which direction the player is facing.
+    public void facingDirection()
+    {
+        if (targetVelocity.x > 0){
+            IsFacingRight = true;
+            Debug.Log("Player facing: Right");
+        }
+        else if (targetVelocity.x < 0) {
+            IsFacingRight = false;
+            Debug.Log("Player facing: left");
+        }
     }
 }

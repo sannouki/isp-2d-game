@@ -16,13 +16,33 @@ public class DraggableItem : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     public void Start()
     {
-        InitializeItem(item);
+        if (item != null)
+        {
+            InitializeItem(item);
+        }
+        else
+        {
+            Debug.LogWarning("Item is not assigned in the inspector.");
+        }
     }
 
     public void InitializeItem(EquiptableItems newItem)
     {
-        item = newItem; // Corrected assignment
-        image.sprite = newItem.image; // Corrected assignment
+        if (newItem == null)
+        {
+            Debug.LogError("InitializeItem called with null item.");
+            return;
+        }
+
+        item = newItem;
+        if (image != null)
+        {
+            image.sprite = newItem.image;
+        }
+        else
+        {
+            Debug.LogError("Image reference is not assigned in the inspector.");
+        }
         RefreshCount();
     }
 
@@ -31,6 +51,10 @@ public class DraggableItem : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         if (countText != null)
         {
             countText.text = count.ToString();
+        }
+        else
+        {
+            Debug.LogError("CountText reference is not assigned in the inspector.");
         }
     }
 
@@ -68,14 +92,23 @@ public class DraggableItem : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     // Set this up to assign an EquiptableItems object to the item field.
     public void AssignItem(EquiptableItems equiptableItem)
     {
+        if (equiptableItem == null)
+        {
+            Debug.LogError("AssignItem called with null item.");
+            return;
+        }
+
         item = equiptableItem;
         if (image != null)
         {
             image.sprite = equiptableItem.image; // Update the UI sprite to match the item
         }
+        else
+        {
+            Debug.LogError("Image reference is not assigned in the inspector.");
+        }
     }
 }
-
 
 
 
