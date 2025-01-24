@@ -1,4 +1,4 @@
-repository "Thesis RPG@thienleesinong@cloud"
+repository "ispProject@thienleesinong@cloud"
   path "/"
     br "/main"
     co "/main"
